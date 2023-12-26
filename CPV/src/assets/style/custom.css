@@ -57,5 +57,12 @@
     width: 120px;
 }
 .projectData{
-    
+
+}
+.button-100{
+    min-width: 100px;
+    width: 100px
+}
+.map_image{
+    width: 100%;
 }

@@ -1,17 +1,17 @@
 import React from 'react'
 import { Table , Row, Col, Button } from 'reactstrap'
 
-export default function ProjectData({handleProjectTableToggle}) {
+export default function ProjectData({handleProjectTableToggle,handleProjectMapToggle}) {
   return (
     <Row>
         <Col sm={5}>
             <div className='projectData'>
-                <Table  responsive>
+                <Table  responsive bordered>
                     <thead>
                     </thead>
                     <tbody>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Address: 
                             </th>
                             <td>
@@ -19,7 +19,7 @@ export default function ProjectData({handleProjectTableToggle}) {
                             </td>
                         </tr>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Website:
                             </th>
                             <td>
@@ -27,7 +27,7 @@ export default function ProjectData({handleProjectTableToggle}) {
                             </td>
                         </tr>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Prepared By:
                             </th>
                             <td>
@@ -35,7 +35,7 @@ export default function ProjectData({handleProjectTableToggle}) {
                             </td>
                         </tr>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Email:
                             </th>
                             <td>
@@ -43,7 +43,7 @@ export default function ProjectData({handleProjectTableToggle}) {
                             </td>
                         </tr>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Phone:
                             </th>
                             <td>
@@ -51,7 +51,7 @@ export default function ProjectData({handleProjectTableToggle}) {
                             </td>
                         </tr>
                         <tr>
-                            <th className="table-primary ps-3">
+                            <th scope="row" className="table-primary ps-3">
                                 Position:
                             </th>
                             <td>
@@ -63,31 +63,39 @@ export default function ProjectData({handleProjectTableToggle}) {
             </div>
         </Col>
         <Col sm={7}>
-            <div>
-            <Table  responsive>
-                <thead>
-                    <tr className="table-success ps-3">
-                        <th>
-                            Total Project's
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="table-primary ps-3">
-                            3401 
-                        </td>
-                    </tr>
-                </tbody>
+            <div style={{ maxWidth: 'fit-content' }}>
+                <Table  responsive  bordered>
+                    <thead>
+                        <tr className="table-primary ps-3">
+                            <th colSpan={2}>
+                                Total Project's
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className=" ps-3">
+                                3401 
+                            </td>
+                        </tr>
+                    </tbody>
                 </Table>
             </div>
         </Col>
+        <div className='mb-5'></div>
         <Col sm={12}>
-            <div className='col-sm-12'>
-                <Button onClick={handleProjectTableToggle} color='primary' className='m-auto d-block'>
-                    Statistics
-                </Button>
-            </div>
+            <Row>
+                <div className='col-sm-6'>
+                    <Button onClick={handleProjectMapToggle} color='primary' className='m-auto d-block button-100'>
+                        Map
+                    </Button>
+                </div>
+                <div className='col-sm-6'>
+                    <Button onClick={handleProjectTableToggle} color='primary' className='m-auto d-block button-100'>
+                        Statistics
+                    </Button>
+                </div>
+            </Row>
         </Col>
     </Row>
   )
