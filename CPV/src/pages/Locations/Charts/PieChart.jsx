@@ -14,6 +14,7 @@ export default function PieChartComponent() {
   },[document.querySelector('.MuiChartsLegend-root')])
   return (
     <PieChart
+      colors={['yellow', 'orange', '#74de2']}
       series={[
         {
           data: [

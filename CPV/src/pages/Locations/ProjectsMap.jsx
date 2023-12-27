@@ -136,6 +136,7 @@ export default function ProjectsMap() {
               {regionTitle}
             </h4>
         </div>
+        <div className='d-flex justify-content-center'>
         <div style={{position: 'relative'}}>
         {chartPositions && 
           <div         
@@ -148,11 +149,9 @@ export default function ProjectsMap() {
               // height: '160px',
               ...chartPositions.position,
             }}>
-             
               <div>
                 <PieChart />
               </div>
-              
           </div>
 }
           <img src={mapImage} usemap="#image_map" style={{width:'738px',height:'600px'}}/>
@@ -171,6 +170,7 @@ export default function ProjectsMap() {
             <area id='11' onMouseEnter={(e)=>handleRagionTitle(e)} alt="Bahah" title="Bahah"  coords="251,476 255,462 263,460 260,446 244,449 236,442 235,457 218,466 226,476 226,487 237,495 242,480 " shape="polygon" />
             <area id='12' onMouseEnter={(e)=>handleRagionTitle(e)} alt="Medina" title="Medina" coords="196,376 207,374 213,375 242,349 233,345 254,333 253,322 261,322 265,298 258,285 248,279 250,265 222,261 213,270 194,271 189,269 191,233 184,229 185,220 179,218 162,220 148,210 132,216 111,192 103,198 96,193 79,197 86,200 86,216 96,222 91,232 98,242 112,250 119,265 124,274 122,292 112,292 98,299 103,311 146,343 157,343 168,352 174,356 189,355 " shape="polygon"></area>
           </map>
+        </div>
         </div>
       </>
   )
