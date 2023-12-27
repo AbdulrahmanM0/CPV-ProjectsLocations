@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Button, Container } from 'reactstrap'
 import ProjectData from './ProjectData'
 import ProjectsTable from './ProjectsTable'
-import ProjectsMap from './ProjectsMap'
+import ProjectsMap from './Map'
+import ProjectsMap2 from './ProjectsMap'
 
 export default function Locations() {
   const [projectTableToggle , setProjectTableToggle] = useState(false)
@@ -43,6 +44,15 @@ export default function Locations() {
           <div className='col-lg-11 col-md-10 col-sm-12 m-auto'>
             <div className='form-container shadow-lg p-4 bg-body rounded overflow-auto'>
               <ProjectsMap />
+            </div>
+          </div>
+        </Container>
+        }
+        {projectMapToggle &&
+        <Container>
+          <div className='col-lg-11 col-md-10 col-sm-12 m-auto'>
+            <div className='form-container shadow-lg p-4 bg-body rounded overflow-auto'>
+              <ProjectsMap2 />
             </div>
           </div>
         </Container>
